@@ -21,7 +21,7 @@ class Reversing {
         StringBuilder result = new StringBuilder();
 
         for (String word : words) {
-            StringBuilder builder = new StringBuilder(word.replaceAll(PATTERN, EMP)).reverse();
+            final StringBuilder builder = new StringBuilder(word.replaceAll(PATTERN, EMP)).reverse();
 
             for (int i = 0; i < word.length(); i++) {
                 if (!(Character.isLetter(word.charAt(i)))) {
