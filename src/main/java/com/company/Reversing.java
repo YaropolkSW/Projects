@@ -1,7 +1,5 @@
 package com.company;
 
-import java.io.IOException;
-
 public class Reversing {
     private static final String EMPTY_STRING = "";
     private static final String SEPARATOR = " ";

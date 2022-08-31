@@ -1,39 +1,44 @@
 import com.company.Reversing;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 
 public class ReversingTest {
-    private static Reversing reversing;
+    private final Reversing reversing = new Reversing();
 
-    @BeforeAll
-    public static void creatingObjectOfReversingClass() {
-        reversing = new Reversing();
-    }
 
     @Test
     public void shouldWorkWithOnlyDigits() {
-        Assertions.assertEquals("12345", reversing.reversingByRule("12345"));
+        final String expected = "12345";
+        final String actual = reversing.reversingByRule("12345");
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void shouldWorkWithOnlyLetters() {
-        Assertions.assertEquals("ytrewq", reversing.reversingByRule("qwerty"));
+        final String expected = "ytrewq";
+        final String actual = reversing.reversingByRule("qwerty");
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void shouldWorkWithTwoAndMoreWords() {
-        Assertions.assertEquals("ytrewq poiu", reversing.reversingByRule("qwerty uiop"));
+        final String expected = "ytrewq poiu";
+        final String actual = reversing.reversingByRule("qwerty uiop");
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void shouldWordWithNumbersAndSpecialSymbols() {
-        Assertions.assertEquals("ytr32@ewq", reversing.reversingByRule("qwe32@rty"));
+        final String expected = "ytr32@ewq";
+        final String actual = reversing.reversingByRule("qwe32@rty");
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void shouldWorkWithEmptyString() {
-        Assertions.assertEquals("", reversing.reversingByRule(""));
+        final String expected = "";
+        final String actual = reversing.reversingByRule("");
+        Assertions.assertEquals(expected, actual);
     }
 }
