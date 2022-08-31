@@ -5,7 +5,7 @@ public class Reversing {
     private static final String SEPARATOR = " ";
     private static final String PATTERN = "[^a-zA-Z]";
 
-    public String reversingByRule(String line) {
+    public String reversingByRule(final String line) {
         final String[] words = line.split(SEPARATOR);
         final StringBuilder result = new StringBuilder();
 
